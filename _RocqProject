@@ -1,0 +1,22 @@
+# ========================================================
+# Makefile for Sumatra
+# ========================================================
+
+-Q src        Sumatra
+-Q autosubst  Sumatra.Autosubst
+
+-Q case_studies/DualMode      Sumatra.CaseStudies.DualMode
+-Q case_studies/Substructural Sumatra.CaseStudies.Substructural
+-Q case_studies/AdjointND     Sumatra.CaseStudies.AdjointND
+-Q case_studies/AdjointSeq    Sumatra.CaseStudies.AdjointSeq
+-Q case_studies/SessionPi     Sumatra.CaseStudies.SessionPi
+-Q case_studies/GradedLinAff  Sumatra.CaseStudies.GradedLinAff
+
+src
+autosubst
+case_studies/DualMode
+case_studies/Substructural
+case_studies/AdjointND
+case_studies/AdjointSeq
+case_studies/SessionPi
+case_studies/GradedLinAff
