@@ -182,7 +182,7 @@ Section JoinFamilyProps.
     forall (e : Entry R M A),
       ctx_join_family l Δ ->
       ctx_join_family
-        (e .: ctx_zero Δ .: (fun j => entry_zero e .: l j)) (e .: Δ).
+        ((e .: ctx_zero Δ) .: (fun j => entry_zero e .: l j)) (e .: Δ).
   Proof.
     intros e Hfam. exists (entry_zero e .: Δ); split.
     - apply ctx_join_family_scons_head; [exact Hfam | reflexivity].

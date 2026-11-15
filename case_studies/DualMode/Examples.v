@@ -36,7 +36,7 @@ Section Examples.
       ⊢ tm_lam (□ A)
           (tm_letbox (tm_var var_zero)
              (tm_box (tm_box (tm_var var_zero))))
-      : (□ A ⇒ □ □ A).
+      : (□ A ⇒ □ (□ A)).
   Proof.
     eapply ht_lam, ht_letbox with
       (Δ1 := (□ A, Lo) .:: ctx_empty) (Δ2 := ctx_zero _).

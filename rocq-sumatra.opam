@@ -1,0 +1,43 @@
+opam-version: "2.0"
+synopsis: "Substructural meta-theory with adjoint resource annotations"
+description: """
+Sumatra is a Rocq library for mechanizing substructural logics and type
+systems. It supplies infrastructure for contexts, resource splitting, renaming,
+and substitutions, as well as proof tactics; the user supplies the object
+language and its judgments."""
+
+maintainer: ["daniel.zackon@mail.mcgill.ca"]
+authors: [
+  "Daniel Zackon"
+  "Ryan Kavanagh"
+  "Alberto Momigliano"
+  "Brigitte Pientka"
+]
+license: "ISC"
+
+homepage: "https://github.com/dzackon/sumatra"
+dev-repo: "git+https://github.com/dzackon/sumatra.git"
+bug-reports: "https://github.com/dzackon/sumatra/issues"
+
+depends: [
+  "rocq-core" {>= "9.0"}
+  "rocq-stdlib" {>= "9.0"}
+]
+
+build: [
+  ["rocq" "makefile" "-f" "_RocqProject" "-o" "Makefile"]
+  [make "-j" jobs]
+]
+
+install: [
+  [make "install" "COQLIBINSTALL=%{lib}%/coq/user-contrib"]
+]
+
+tags: [
+  "logpath:Sumatra"
+  "category:Computer Science"
+  "keyword:substructural type systems"
+  "keyword:linear logic"
+  "keyword:adjoint logic"
+  "keyword:metatheory"
+]
