@@ -11,6 +11,9 @@ its structural permissions, and a **multiplicity** recording its availability
 or quantity. Splitting and consumption update multiplicities without removing
 variable positions.
 
+The library is the subject of a paper to appear at the 16th ACM SIGPLAN
+International Conference on Certified Programs and Proofs (CPP 2027).
+
 ## Build
 
 The current sources have been checked with Rocq 9.1.1 and Stdlib 9.1.0. The
@@ -61,8 +64,8 @@ Each linked README gives a file inventory.
 | [GradedLinAff](case_studies/GradedLinAff/README.md) | linear and affine modes with semiring multiplicities | Substitution, progress, preservation, exact/bounded use at natural-number grades |
 
 The development declares no axioms of its own and contains no admitted proofs.
-Results depend on at most `functional_extensionality_dep` or `Eq_rect_eq`, both
-from the Standard Library. This can be verified directly in Rocq with:
+Results depend on at most `functional_extensionality_dep` from the Standard
+Library. This can be verified directly in Rocq with:
 
 ```coq
 Print Assumptions <theorem>.
